@@ -1,5 +1,7 @@
+#!/usr/bin/python3
+
 # READ ME
-# Built in modules being used: os, time, logging
+# Built in modules being used: os, time, logging, argparse, json, collections
 # New modules required: tabulate (inorder to show summary)
 
 # Pre-requisites
@@ -9,8 +11,7 @@
 # 3. Obtain the deployment profile from CSP for the FLEX license. Repeat this script for each deployment profile separately.
 # 4. Provide the list of the FW IPs which need to be migrated to Flex license. Add it to firewall_ips.txt in the same folder. Provide one IP per line, no additional info. Refer to sample here.
 # 5. Trigger the script using the below commands.
-# 6. Grab a cup of coffee while we migrate your firewalls to FW-FLEx license.
-
+# 6. Grab a cup of coffee while we migrate your firewalls to FW-FLEX license.
 
 import os
 import time
