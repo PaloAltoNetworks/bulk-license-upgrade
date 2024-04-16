@@ -1,6 +1,12 @@
 # bulk-license-upgrade
 Upgrade licenses from Perpetual/Enterprise to a Flexible credit based deployment profile
 
+Tool features/objectives:
+-------------------------
+1. Get the current number of firewalls against each core value from the list of FWs provided (to help with assessing the credit requirements).
+2. Get the current status of license on each firewall. To identify FWs requiring migration. (Also to re-check the license state of FWs post license upgrade operation).
+3. Migrate the FWs from enterprise/perpetual license to a flexible deployment profile authcode provided by user.
+
 Pre-requisites:
 ---------------
 1. Server with latest python installed.
