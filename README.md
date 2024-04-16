@@ -15,6 +15,7 @@ Pre-requisites:
 4. All the Firewalls (to be upgraded) to be connected to a Panorama.
 5. All the Firewalls (to be upgraded) should be online and should be able to reach to CSP.
 6. All the Firewalls (to be upgraded) should have valid (not expired) existing license.
+7. Minimum PanOS version required in each release: 10.0.10+, 10.1.12+, 10.2.8+, 11.0.4+. (Flexible deployment profile is not supported for 10.0.4 and below panos versions)
 
 Procedure workflow:
 -------------------
