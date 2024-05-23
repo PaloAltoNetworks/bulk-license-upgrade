@@ -10,7 +10,7 @@ Tool features/objectives:
 Pre-requisites:
 ---------------
 1. Server with latest python installed.
-2. Python modules required: collections, tabulate, json, argparse, logging, time, os
+2. Python modules required: random, concurrent, requests, collections, tabulate, json, argparse, logging, time, os
 3. All the Firewalls (to be upgraded) must be reachable from the server in #1.
 4. All the Firewalls (to be upgraded) to be connected to a Panorama.
 5. All the Firewalls (to be upgraded) should be online and should be able to reach to CSP.
