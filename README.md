@@ -20,10 +20,11 @@ Pre-requisites:
 Procedure workflow:
 -------------------
 1. From the panorama, going to respective DG, configure a temporary username and password with administrator access. Push this config down to all applicable FWs.
-2. From the CSP, obtain the 'Licensing API key' and the 'Deployment Profile' to which the FWs need to be migrated.
+2. From the CSP, obtain the 'Licensing API key' and the 'Deployment Profile' to which the FWs need to be migrated. Path: Products -> API Key Management -> Licensing API.
 3. Provide the username, password, license api key and deployment profile values to an input json file (refer to sample_input.json).
 4. Provide the list of firewall IPs (which need to be migrated to flex license) in a text file (refer to sample_iplist.txt).
 5. Trigger the script as below.
+6. After script completion, from panorama, remove the user credentials created in step 1, for security.
 
 Script Arguments:
 -----------------
