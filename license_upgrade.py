@@ -44,6 +44,12 @@ username = userdata.get('username','admin')
 password = userdata.get('password','password')
 license_api_key = userdata.get('license_api_key','abcd1234')
 dp_auth_code = userdata.get('dp_auth_code','AUTHCODE')
+if userdata.get('ssl_verify',None) == 'False':
+    ssl_verify = False
+elif userdata.get('ssl_verify',None) == 'True':
+    ssl_verify = True
+else:
+    ssl_verify = None
 
 waittime = 600 #Secs to wait before checking the upgrade status
 upgsleep = 10
@@ -70,7 +76,7 @@ requests.packages.urllib3.disable_warnings(category=requests.packages.urllib3.ex
 logging.getLogger("requests.packages.urllib3").setLevel(logging.CRITICAL)
 logging.getLogger("urllib3").propagate = False
 
-def query_api(action, url, headers={}, payload={}, options={}, verify=False, timeout=30, maxretry=1, upgradecall=False):
+def query_api(action, url, headers={}, payload={}, options={}, verify=ssl_verify, timeout=30, maxretry=1, upgradecall=False):
 
     if upgradecall:
         logging.debug(f"Sleeping randomly for a max of 10 secs to avoid too many requests sent at once")
