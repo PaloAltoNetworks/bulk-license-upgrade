@@ -10,7 +10,7 @@ Tool features/objectives:
 Pre-requisites:
 ---------------
 1. Server with latest python installed.
-2. Python modules required: collections, tabulate, json, argparse, logging, time, os
+2. Python modules required: random, concurrent, requests, collections, tabulate, json, argparse, logging, time, os
 3. All the Firewalls (to be upgraded) must be reachable from the server in #1.
 4. All the Firewalls (to be upgraded) to be connected to a Panorama.
 5. All the Firewalls (to be upgraded) should be online and should be able to reach to CSP.
@@ -20,10 +20,11 @@ Pre-requisites:
 Procedure workflow:
 -------------------
 1. From the panorama, going to respective DG, configure a temporary username and password with administrator access. Push this config down to all applicable FWs.
-2. From the CSP, obtain the 'Licensing API key' and the 'Deployment Profile' to which the FWs need to be migrated.
+2. From the CSP, obtain the 'Licensing API key' and the 'Deployment Profile' to which the FWs need to be migrated. Path: Products -> API Key Management -> Licensing API.
 3. Provide the username, password, license api key and deployment profile values to an input json file (refer to sample_input.json).
 4. Provide the list of firewall IPs (which need to be migrated to flex license) in a text file (refer to sample_iplist.txt).
 5. Trigger the script as below.
+6. After script completion, from panorama, remove the user credentials created in step 1, for security.
 
 Script Arguments:
 -----------------
