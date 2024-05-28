@@ -220,8 +220,6 @@ for fw_ip in fw_list:
     # Upgrade command list
     logging.info(f"{fw_ip}: License upgrade will be attempted for this firewall")
     cmd4 = f"<request><license><upgrade><auth-code>{dp_auth_code}</auth-code><mode>auto</mode></upgrade></license></request>"
-#    cmd4 = f"<request><license><deactivate><VM-Capacity><mode>auto</mode></VM-Capacity></deactivate></license></request>"
-#    cmd4 = f"<request><license><fetch><auth-code>A2780910</auth-code></fetch></license></request>"
     requrl  = f"https://{fw_ip}/api/?type=op&cmd={cmd4}&key={fw_api_keys[fw_ip]}"
     requrls += [requrl]
     reqfws += [fw_ip]
